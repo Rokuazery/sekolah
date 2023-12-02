@@ -10,9 +10,9 @@ return new class extends Migration {
         Schema::create('registrasi_siswa', function (Blueprint $table) {
             $table->id()->primary;
             $table->string('nama', 64);
-            $table->string('alamat', 256);
-            $table->string('jenis_kelamin', 16);
-            $table->string('agama', 18);
+            $table->string('alamat', 256)->nullable(true);
+            $table->string('jenis_kelamin', 16)->nullable(true);
+            $table->string('agama', 18)->nullable(true);
             $table->string('sekolah_asal', 64);
             $table->string('username', 50);
             $table->string('password', 255);
