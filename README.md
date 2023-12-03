@@ -11,6 +11,18 @@ Welcome to the Sekolah project! This is a basic Laravel application for managing
 - **Update Account/Student Information:** Modify and update your own account information through account management. [Update]
 - **Remove Account/Student:** Remove your own account through account management. [Delete]
 
+## Preview
+  <details>
+      <summary><strong>App Preview (Click to expand)</strong></summary>
+      <br/>
+      <p>
+      <image width="350" src="https://github.com/Rokuazery/sekolah/assets/48817307/2fafd365-81a4-4388-a58c-18bb2acfc27f"/>
+      <image width="350" src="https://github.com/Rokuazery/sekolah/assets/48817307/7dcc8d1b-ca99-403e-a28e-d7f1a454c718"/>
+      <image width="350" src="https://github.com/Rokuazery/sekolah/assets/48817307/a6b90cf1-5e1c-4611-b24b-7fb22d2c07d0"/>
+      <image width="350" src="https://github.com/Rokuazery/sekolah/assets/48817307/323b28e3-39e5-44bb-a6c7-f89f8ff55112"/>
+      <image width="350" src="https://github.com/Rokuazery/sekolah/assets/48817307/51be4acc-4de6-4f26-94aa-af5102dc8e8b"/>
+      </p>
+    </details>
 
 ## Prerequisites
 
