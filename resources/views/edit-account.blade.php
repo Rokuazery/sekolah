@@ -9,8 +9,8 @@
 @endsection
 
 @section('content')
-<div class="flex justify-center items-center">
-    <form class="flex flex-col gap-5 bg-white p-5 rounded-lg border border-gray-200 shadow-lg w-80 md:w-96" action="{{ route('account.update', $user->id) }}" method="POST">
+<div class="flex justify-center items-center h-screen">
+    <form class="flex flex-col gap-5 bg-white p-5 rounded-lg border border-gray-200 shadow-lg w-80 md:w-96 max-h-screen overflow-y-auto" action="{{ route('account.update', $user->id) }}" method="POST">
         @csrf
         <x-input-field icon="fa fa-user" name="nama" type="text" placeholder="Nama lengkap..." errorType="nama" value="{{$user->nama}}"/>
             <x-input-field icon="fa fa-home" name="alamat" type="text" placeholder="Alamat..." errorType="alamatp" value="{{$user->alamat}}"/>
@@ -39,10 +39,7 @@
                 </x-select>
 
 
-                <x-primary-button type="submit" content="Save"/>
-                <x-primary-button type="submit" content="Delete"/>
-
-        {{-- <x-input-field icon="fa fa-school" name="sekolah_asal" type="text" placeholder="Sekolah asal..." errorType="sekolah_asal" :value="old('sekolah_asal')"/> --}}
+                <x-primary-button type="submit" content="Simpan"/>
     </form>
 </div>
 @endsection

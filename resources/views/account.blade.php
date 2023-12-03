@@ -17,6 +17,10 @@
             <x-alert-message type="success" message="{{ session('success') }}"/>
         @endif
 
+        @if($errors->any())
+            <x-alert-message type="danger" message="{{ $errors->first() }}"/>
+        @endif
+
         <div class="p-5 bg-blue-100 flex font-semibold items-center rounded-lg h-fit w-full gap-5">
 
             <div class="rounded-full border p-5 w-20 h-20 bg-white shadow-md flex items-center justify-center">
@@ -39,32 +43,11 @@
 
                 <x-card icon="fa-school" title="Sekolah Asal">{{$user->sekolah_asal}}</x-card>
 
+        <form class="w-full" action="{{ route('account.delete', $user->id) }}" method="POST">
+            @csrf
+            <button class="p-3 bg-white border border-red-400 rounded-lg w-full hover:bg-red-400 hover:text-white transition-colors">Hapus Akun (tidak bisa di batalkan)</button>
+        </form>
 
-
-        {{-- <div class="w-full bg-blue-100 p-5 rounded-lg">
-            <h1><i class="fa fa-home"> </i> Alamat</h1>
-            <p>{{ $user->alamat ?: '-' }}</p>
-        </div>
-
-        <div class="w-full bg-blue-100 p-5 rounded-lg">
-            <h1><i class="fa fa-home"> </i> Alamat</h1>
-            <p>{{ $user->alamat ?: '-' }}</p>
-        </div> --}}
     </div>
    </div>
-
-    {{-- <h3>👋 Hello, {{$user->nama}}!</h3> --}}
-    {{-- <div class="p-5 bg-blue-100 rounded-lg">
-        <h2><i class="fa fa-graduation-cap"></i> Siswa terdaftar: {{$totalUsers}}</h2>
-    </div>
-
-
-    <div class="p-5 bg-blue-100 rounded-lg">
-    <h1><i class="fa fa-star"></i> Agama <i class="fa fa-angle-right"></i></h1>
-    <div class="flex gap-2 mt-5 flex-wrap">
-    @foreach($religions as $religion => $count)
-        <h2>{{ $religion }}: {{ $count }}</h2>
-    @endforeach
-    </div>
-    </div> --}}
 @endsection

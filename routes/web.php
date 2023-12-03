@@ -26,6 +26,7 @@ Route::get('register', [AuthController::class, 'register'])->name('register');
 Route::get('account', [AccountController::class, 'create'])->name('account');
 Route::get('edit-account', [AccountController::class, 'editAccount'])->name('edit-account');
 Route::post('update-account/{id}', [AccountController::class, 'update'])->name('account.update');
+Route::post('delete-account/{id}', [AccountController::class, 'delete'])->name('account.delete');
 
 // Menu
 Route::get('/', [DashboardController::class, 'create'])->name('dashboard');

@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Session;
 use Hash;
 use Auth;
-use DB;
 
 class AuthController extends Controller
 {
@@ -93,30 +92,5 @@ class AuthController extends Controller
         Auth::logout();
 
         return Redirect('login');
-    }
-
-    public function deleteAccount()
-    {
-        $user = Auth::user();
-
-        if ($user) {
-            // Delete the user record from the database
-            DB::beginTransaction();
-
-            try {
-                $user->delete();
-                DB::commit();
-                Auth::logout(); // Logout the user after successful deletion
-                Session::flush();
-
-                return redirect('login')->withSuccess('Akun telah berhasil dihapus.');
-            } catch (\Exception $e) {
-                DB::rollBack();
-                // Handle the case where user deletion failed
-                return redirect()->back()->withErrors('Oops, terjadi kesalahan saat menghapus akun. Silahkan coba lagi!');
-            }
-        }
-
-        return redirect('login')->withErrors('Anda tidak dapat mengakses halaman ini.');
     }
 }
