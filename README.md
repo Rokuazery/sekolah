@@ -1,4 +1,4 @@
-# Sekolah Management System - Laravel 10
+# Sekolah - Laravel 10
 
 ### Assignment: UAS from Pak Jaka Taruna
 
